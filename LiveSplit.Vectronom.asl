@@ -1,5 +1,5 @@
 state("Vectronom") {
-	// Value found by badBlackShark
+	// Values found by badBlackShark
 
 	int completed_levels : "UnityPlayer.dll", 0x01546C30, 0x128, 0x8, 0x38, 0x60, 0x100;
 	int game_state       : "UnityPlayer.dll", 0x01546C30, 0x120, 0x0, 0x38, 0x60, 0x108;
