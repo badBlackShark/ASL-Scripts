@@ -18,7 +18,7 @@ startup {
 }
 
 init {
-  // We need this because the split action doesn't have old and current states.
+	// We need this because the split action doesn't have old and current states.
 	vars.need_split = false;
 }
 
@@ -42,5 +42,7 @@ split {
 }
 
 isLoading {
-	return current.game_state == 1;
+	if(settings["load_removal"]) {
+		return current.game_state == 1;
+	}
 }
