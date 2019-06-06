@@ -18,6 +18,7 @@ startup {
 }
 
 init {
+  // We need this because the split action doesn't have old and current states.
 	vars.need_split = false;
 }
 
