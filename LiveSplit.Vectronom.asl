@@ -1,9 +1,9 @@
 state("Vectronom") {
-	// Values found by badBlackShark
+	// Values found by badBlackShark and -7
 
-	int completed_levels : "UnityPlayer.dll", 0x01546C30, 0x128, 0x8,  0x38, 0x60, 0x100;
-	int game_state       : "UnityPlayer.dll", 0x01546C30, 0x120, 0x0,  0x38, 0x60, 0x108;
-	int DeathsPerLevel   : "UnityPlayer.dll", 0x01501B80, 0x608, 0x30, 0xA8, 0x28, 0xAC;
+	int completed_levels : "UnityPlayer.dll", 0x01501B80, 0x5F0, 0x30, 0x28, 0x28, 0x118;
+	int game_state       : "UnityPlayer.dll", 0x01546C30, 0x128, 0x8,  0x38, 0x60, 0x124;
+	int DeathsPerLevel   : "UnityPlayer.dll", 0x01501B80, 0x5F0, 0x30, 0x68, 0x28, 0x4C;
 }
 
 startup {
@@ -86,4 +86,8 @@ isLoading {
 	if(settings["load_removal"]) {
 		return current.game_state == 1;
 	}
+}
+
+start {
+	return old.game_state == 2 && current.game_state == 3;
 }
