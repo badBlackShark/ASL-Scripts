@@ -3,7 +3,7 @@ state("Vectronom") {
 
     int completed_levels : "UnityPlayer.dll", 0x0179E7C0, 0x5F0, 0x30, 0x38, 0x28, 0x120;
     int game_state       : "UnityPlayer.dll", 0x0179E7C0, 0x5F0, 0x30, 0x38, 0x28, 0x128;
-    int DeathsPerLevel   : "UnityPlayer.dll", 0x0179E7C0, 0x5F0, 0x30, 0x78, 0x28, 0x4C;
+    int DeathsPerLevel   : "UnityPlayer.dll", 0x0179B168, 0x768, 0x150, 0x1A8;
 }
 
 startup {
@@ -82,5 +82,5 @@ isLoading {
 }
 
 start {
-    return old.game_state == 2 && current.game_state == 3;
+    return old.game_state == 2 && current.game_state == 1;
 }
