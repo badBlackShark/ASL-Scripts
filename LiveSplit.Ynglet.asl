@@ -209,7 +209,6 @@ startup {
 
     vars.ResetVars = (EventHandler)((s, e) => {
         vars.collectedTrianglesPerScene = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        vars.UpdateTrianglesTracker(0);
     });
     timer.OnStart += vars.ResetVars;
 
@@ -269,7 +268,9 @@ init {
             vars.sessionAttempts
         };
 
-        if(settings["triangles_tracking"]) vars.UpdateTrianglesTracker(0);
+        if(settings["triangles_tracking"]) {
+            vars.UpdateTrianglesTracker(0);
+        }
 
         vars.watchers.UpdateAll(game);
         print("[Ynglet Autosplitter] Done scanning");
@@ -491,14 +492,14 @@ isLoading {
 }
 
 start {
+    if(vars.currentScene.Old == 2 && vars.currentScene.Current == 4) {
+        return true;
+    }
+
     if(settings["start_il"]) {
         if(vars.currentScene.Old == 4 && vars.currentScene.Current > 4 || vars.currentScene.Old == 2 && vars.currentScene.Current >= 22) {
             return true;
         }
-    }
-
-    if(vars.currentScene.Old == 2 && vars.currentScene.Current == 4) {
-        return true;
     }
 
     return false;
