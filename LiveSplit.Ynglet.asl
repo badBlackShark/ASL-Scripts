@@ -18,11 +18,135 @@ startup {
     settings.Add("splits", true, "Splits");
     settings.CurrentDefaultParent = "splits";
 
-    settings.Add("split_levels", true, "Split After Levels");
-    settings.SetToolTip("split_levels", "Splits once the hub loads in after levels / the main menu loads after bonus levels. Can be used for all categories.");
+    settings.Add("split_levels", true, "Splits Coming Out Of Levels");
+    settings.CurrentDefaultParent = "split_levels";
 
-    settings.Add("split_hub", false, "Split Hub Separately");
-    settings.SetToolTip("split_hub", "Splits whenever a level is entered from the hub, so overworld movement can be split separately.");
+    settings.Add("split_botanisk_have", true, "Split after Botanisk Have.");
+    settings.SetToolTip("split_botanisk_have", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_kastellet", true, "Split after Kastellet.");
+    settings.SetToolTip("split_kastellet", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_valby", true, "Split after Valby.");
+    settings.SetToolTip("split_valby", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_assistens_kirkegard", true, "Split after Assistens Kirkegård.");
+    settings.SetToolTip("split_assistens_kirkegard", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_christiania", true, "Split after Christiania.");
+    settings.SetToolTip("split_christiania", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_orstedsparken", true, "Split after Ørstedsparken.");
+    settings.SetToolTip("split_orstedsparken", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_sydhavnen", true, "Split after Sydhavnen.");
+    settings.SetToolTip("split_sydhavnen", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_bella_center", true, "Split after Bella Center.");
+    settings.SetToolTip("split_bella_center", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_vesterbro", true, "Split after Vesterbro.");
+    settings.SetToolTip("split_vesterbro", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_klovermarken", true, "Split after Kløvermarken.");
+    settings.SetToolTip("split_klovermarken", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_kastrup", true, "Split after Kastrup.");
+    settings.SetToolTip("split_kastrup", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_planetarium", true, "Split after Planetarium.");
+    settings.SetToolTip("split_planetarium", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_tarnby", true, "Split after Tårnby.");
+    settings.SetToolTip("split_tarnby", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_reffen", true, "Split after Reffen.");
+    settings.SetToolTip("split_reffen", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_norrebroparken", true, "Split after Nørrebroparken.");
+    settings.SetToolTip("split_norrebroparken", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_amalienborg", false, "Split after Amalienborg.");
+    settings.SetToolTip("split_amalienborg", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_struts", true, "Split after Struts.");
+    settings.SetToolTip("split_struts", "Splits once the main menu loads after the level is completed.");
+
+    settings.Add("split_snabel_a", true, "Split after Snabel-A.");
+    settings.SetToolTip("split_snabel_a", "Splits once the main menu loads after the level is completed.");
+
+    settings.Add("split_fika", true, "Split after Fika.");
+    settings.SetToolTip("split_fika", "Splits once the main menu loads after the level is completed.");
+
+    settings.Add("split_sar_skrivning", true, "Split after Sär Skrivning.");
+    settings.SetToolTip("split_sar_skrivning", "Splits once the main menu loads after the level is completed.");
+
+    settings.CurrentDefaultParent = "splits";
+    settings.Add("split_hub", true, "Splits Going Into Levels");
+    settings.CurrentDefaultParent = "split_hub";
+
+    settings.Add("split_hub_botanisk_have", false, "Split going into Botanisk Have.");
+    settings.SetToolTip("split_hub_botanisk_have", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_kastellet", false, "Split going into Kastellet.");
+    settings.SetToolTip("split_hub_kastellet", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_valby", false, "Split going into Valby.");
+    settings.SetToolTip("split_hub_valby", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_assistens_kirkegard", false, "Split going into Assistens Kirkegård.");
+    settings.SetToolTip("split_hub_assistens_kirkegard", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_christiania", false, "Split going into Christiania.");
+    settings.SetToolTip("split_hub_christiania", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_orstedsparken", false, "Split going into Ørstedsparken.");
+    settings.SetToolTip("split_hub_orstedsparken", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_sydhavnen", false, "Split going into Sydhavnen.");
+    settings.SetToolTip("split_hub_sydhavnen", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_bella_center", false, "Split going into Bella Center.");
+    settings.SetToolTip("split_hub_bella_center", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_vesterbro", false, "Split going into Vesterbro.");
+    settings.SetToolTip("split_hub_vesterbro", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_klovermarken", false, "Split going into Kløvermarken.");
+    settings.SetToolTip("split_hub_klovermarken", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_kastrup", false, "Split going into Kastrup.");
+    settings.SetToolTip("split_hub_kastrup", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_planetarium", false, "Split going into Planetarium.");
+    settings.SetToolTip("split_hub_planetarium", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_tarnby", false, "Split going into Tårnby.");
+    settings.SetToolTip("split_hub_tarnby", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_reffen", false, "Split going into Reffen.");
+    settings.SetToolTip("split_hub_reffen", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_norrebroparken", false, "Split going into Nørrebroparken.");
+    settings.SetToolTip("split_hub_norrebroparken", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_amalienborg", true, "Split going into Amalienborg.");
+    settings.SetToolTip("split_hub_amalienborg", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_struts", false, "Split going into Struts.");
+    settings.SetToolTip("split_hub_struts", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+
+    settings.Add("split_hub_snabel_a", false, "Split going into Snabel-A.");
+    settings.SetToolTip("split_hub_snabel_a", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+
+    settings.Add("split_hub_fika", false, "Split going into Fika.");
+    settings.SetToolTip("split_hub_fika", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+
+    settings.Add("split_hub_sar_skrivning", false, "Split going into Sär Skrivning.");
+    settings.SetToolTip("split_hub_sar_skrivning", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+
+
+    settings.CurrentDefaultParent = "splits";
 
     settings.Add("start_il", false, "Start Timer on Level Start");
     settings.SetToolTip("start_il", "Starts the timer whenever you start a level, not just from the main menu. Good for individual level runs.");
@@ -35,7 +159,7 @@ startup {
     settings.CurrentDefaultParent = "misc";
 
     settings.Add("triangles_tracking", false, "Track Collected Triangles");
-    settings.SetToolTip("triangles_tracking", "Adds a text component that tracks how many triangles you have collected out of the total amount in the current level. This only works if you don't quit the level.");
+    settings.SetToolTip("triangles_tracking", "Adds a text component that tracks how many triangles you have collected out of the total amount in the current level.");
 
     settings.Add("gameTimeReminder", true, "Game Time Reminder");
     settings.SetToolTip("gameTimeReminder", "Reminds you to enable comparing to game time if you're not.");
@@ -88,6 +212,20 @@ startup {
         vars.UpdateTrianglesTracker(0);
     });
     timer.OnStart += vars.ResetVars;
+
+    vars.CheckTriangles = (Func<bool, bool, bool>)((shouldSplit, setting_enabled) => {
+        if(setting_enabled) {
+            if(vars.collectedTrianglesPerScene[vars.lastLevel] == vars.trianglesPerScene[vars.lastLevel]) {
+                return shouldSplit;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return shouldSplit;
+        }
+    });
 }
 
 // Adapted from https://github.com/CryZe/AHatInTimeAutoSplitter/blob/master/AHatInTime.asl
@@ -182,25 +320,165 @@ update {
 }
 
 split {
-    if(settings["split_levels"]) {
-        if(vars.currentScene.Old > 4 && vars.currentScene.Current == 4 ||
-           vars.currentScene.Old == 4 && vars.currentScene.Current == 20 ||
-           vars.currentScene.Old >= 22 && vars.currentScene.Current == 2) {
-            if(settings["split_triangles"]) {
-                if(vars.collectedTrianglesPerScene[vars.lastLevel] == vars.trianglesPerScene[vars.lastLevel]) {
-                    return true;
-                }
-            }
-            else {
-                return true;                
-            }
-        }
+    if(vars.currentScene.Old == 5 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_botanisk_have"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 6 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_kastellet"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 7 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_valby"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 8 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_assistens_kirkegard"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 9 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_christiania"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 10 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_orstedsparken"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 11 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_sydhavnen"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 12 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_bella_center"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 13 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_vesterbro"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 14 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_klovermarken"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 15 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_kastrup"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 16 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_planetarium"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 17 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_tarnby"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 18 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_reffen"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 19 && vars.currentScene.Current == 4) {
+        return vars.CheckTriangles(settings["split_norrebroparken"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 21 && vars.currentScene.Current == 2) {
+        return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 22 && vars.currentScene.Current == 2) {
+        return vars.CheckTriangles(settings["split_struts"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 23 && vars.currentScene.Current == 2) {
+        return vars.CheckTriangles(settings["split_snabel_a"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 24 && vars.currentScene.Current == 2) {
+        return vars.CheckTriangles(settings["split_fika"], settings["split_triangles"]);
+    }
+    
+    if(vars.currentScene.Old == 25 && vars.currentScene.Current == 2) {
+        return vars.CheckTriangles(settings["split_sar_skrivning"], settings["split_triangles"]);
     }
 
-    if(settings["split_hub"]) {
-        if(vars.currentScene.Old == 4 && vars.currentScene.Current > 4) {
-            return true;
-        }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 5) {
+        return settings["split_hub_botanisk_have"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 6) {        
+        return settings["split_hub_kastellet"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 7) {        
+        return settings["split_hub_valby"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 8) {        
+        return settings["split_hub_assistens_kirkegard"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 9) {        
+        return settings["split_hub_christiania"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 10) {        
+        return settings["split_hub_orstedsparken"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 11) {        
+        return settings["split_hub_sydhavnen"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 12) {        
+        return settings["split_hub_bella_center"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 13) {        
+        return settings["split_hub_vesterbro"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 14) {        
+        return settings["split_hub_klovermarken"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 15) {        
+        return settings["split_hub_kastrup"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 16) {        
+        return settings["split_hub_planetarium"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 17) {        
+        return settings["split_hub_tarnby"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 18) {        
+        return settings["split_hub_reffen"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 19) {        
+        return settings["split_hub_norrebroparken"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 20) {        
+        return settings["split_hub_amalienborg"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 22) {        
+        return settings["split_hub_struts"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 23) {        
+        return settings["split_hub_snabel_a"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 24) {        
+        return settings["split_hub_fika"];
+    }
+
+    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 25) {        
+        return settings["split_hub_sar_skrivning"];
     }
 
     return false;
