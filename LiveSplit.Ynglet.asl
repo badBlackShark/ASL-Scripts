@@ -165,8 +165,9 @@ startup {
     settings.SetToolTip("gameTimeReminder", "Reminds you to enable comparing to game time if you're not.");
 
     // Adding a 0 at the start to display that scenes outside of levels have no triangles.
-    vars.trianglesPerScene = new int[] {0, 3, 0, 3, 0, 5, 0, 4, 0, 3, 0, 5, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0};
-    vars.collectedTrianglesPerScene = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    // Adding a 0 at the end to display that scenes in the Bonus World have no triangles.
+    vars.trianglesPerScene = new int[] {0, 3, 0, 3, 0, 5, 0, 4, 0, 3, 0, 5, 0, 5, 0, 5, 0, 0};
+    vars.collectedTrianglesPerScene = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     vars.textSettingTriangles = null;
     vars.lastLevel = 0;
@@ -208,7 +209,7 @@ startup {
     });
 
     vars.ResetVars = (EventHandler)((s, e) => {
-        vars.collectedTrianglesPerScene = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        vars.collectedTrianglesPerScene = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     });
     timer.OnStart += vars.ResetVars;
 
@@ -302,12 +303,20 @@ update {
     vars.watchers.UpdateAll(game);
 
     if(vars.currentScene.Old != vars.currentScene.Current) {
+        print(vars.currentScene.Current.ToString());
+
         vars.lastLevel = vars.currentLevel;
-        if(vars.currentScene.Current <= 4) {
+        // Scenes outside of levels
+        if(vars.currentScene.Current <= 6) {
             vars.currentLevel = 0;
         }
+        // Scenes in the bonus world
+        else if(vars.currentScene.Current >= 24){
+            vars.currentLevel = 17;
+        }
+        // Levels from the Story World
         else {
-            vars.currentLevel = vars.currentScene.Current - 4; 
+            vars.currentLevel = vars.currentScene.Current - 6; 
         }
     }
 
@@ -492,12 +501,12 @@ isLoading {
 }
 
 start {
-    if(vars.currentScene.Old == 2 && vars.currentScene.Current == 4) {
+    if((vars.currentScene.Old == 2 && vars.currentScene.Current == 6) || (vars.currentScene.Old == 2 && vars.currentScene.Current == 24)) {
         return true;
     }
 
     if(settings["start_il"]) {
-        if(vars.currentScene.Old == 4 && vars.currentScene.Current > 4 || vars.currentScene.Old == 2 && vars.currentScene.Current >= 22) {
+        if((vars.currentScene.Old == 6 && vars.currentScene.Current > 6) || (vars.currentScene.Old == 24 && vars.currentScene.Current >= 24)) {
             return true;
         }
     }
