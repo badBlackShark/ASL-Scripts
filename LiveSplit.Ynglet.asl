@@ -330,165 +330,85 @@ update {
 }
 
 split {
-    if(vars.currentScene.Old == 5 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_botanisk_have"], settings["split_triangles"]);
+    // Split if exiting a level and loading the Story World map
+    if(vars.currentScene.Current == 6){
+        switch((int) vars.currentScene.Old){
+            case 7: return vars.CheckTriangles(settings["split_botanisk_have"], settings["split_triangles"]);
+            case 8: return vars.CheckTriangles(settings["split_kastellet"], settings["split_triangles"]);
+            case 9: return vars.CheckTriangles(settings["split_valby"], settings["split_triangles"]);
+            case 10: return vars.CheckTriangles(settings["split_assistens_kirkegard"], settings["split_triangles"]);
+            case 11: return vars.CheckTriangles(settings["split_christiania"], settings["split_triangles"]);
+            case 12: return vars.CheckTriangles(settings["split_orstedsparken"], settings["split_triangles"]);
+            case 13: return vars.CheckTriangles(settings["split_sydhavnen"], settings["split_triangles"]);
+            case 14: return vars.CheckTriangles(settings["split_bella_center"], settings["split_triangles"]);
+            case 15: return vars.CheckTriangles(settings["split_vesterbro"], settings["split_triangles"]);
+            case 16: return vars.CheckTriangles(settings["split_klovermarken"], settings["split_triangles"]);
+            case 17: return vars.CheckTriangles(settings["split_kastrup"], settings["split_triangles"]);
+            case 18: return vars.CheckTriangles(settings["split_planetarium"], settings["split_triangles"]);
+            case 19: return vars.CheckTriangles(settings["split_tarnby"], settings["split_triangles"]);
+            case 20: return vars.CheckTriangles(settings["split_reffen"], settings["split_triangles"]);
+            case 21: return vars.CheckTriangles(settings["split_norrebroparken"], settings["split_triangles"]);
+            case 22: return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
+        }
+    }
+    // Split if exiting a level and loading the Bonus World map
+    if(vars.currentScene.Current == 24){
+        //if(vars.currentScene.Old == 22 && vars.currentScene.Current == 2) {
+        //    return vars.CheckTriangles(settings["split_struts"], settings["split_triangles"]);
+        //}
+        //
+        //if(vars.currentScene.Old == 23 && vars.currentScene.Current == 2) {
+        //    return vars.CheckTriangles(settings["split_snabel_a"], settings["split_triangles"]);
+        //}
+        //
+        //if(vars.currentScene.Old == 24 && vars.currentScene.Current == 2) {
+        //    return vars.CheckTriangles(settings["split_fika"], settings["split_triangles"]);
+        //}
+        //
+        //if(vars.currentScene.Old == 25 && vars.currentScene.Current == 2) {
+        //    return vars.CheckTriangles(settings["split_sar_skrivning"], settings["split_triangles"]);
+        //}
     }
     
-    if(vars.currentScene.Old == 6 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_kastellet"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 7 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_valby"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 8 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_assistens_kirkegard"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 9 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_christiania"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 10 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_orstedsparken"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 11 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_sydhavnen"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 12 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_bella_center"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 13 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_vesterbro"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 14 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_klovermarken"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 15 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_kastrup"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 16 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_planetarium"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 17 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_tarnby"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 18 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_reffen"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 19 && vars.currentScene.Current == 4) {
-        return vars.CheckTriangles(settings["split_norrebroparken"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 21 && vars.currentScene.Current == 2) {
-        return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 22 && vars.currentScene.Current == 2) {
-        return vars.CheckTriangles(settings["split_struts"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 23 && vars.currentScene.Current == 2) {
-        return vars.CheckTriangles(settings["split_snabel_a"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 24 && vars.currentScene.Current == 2) {
-        return vars.CheckTriangles(settings["split_fika"], settings["split_triangles"]);
-    }
-    
-    if(vars.currentScene.Old == 25 && vars.currentScene.Current == 2) {
-        return vars.CheckTriangles(settings["split_sar_skrivning"], settings["split_triangles"]);
+    // Split if loading a level while coming from the Story World map
+    if(vars.currentScene.Old == 6){
+        switch((int) vars.currentScene.Current){
+            case 7: return settings["split_hub_botanisk_have"];
+            case 8: return settings["split_hub_kastellet"];
+            case 9: return settings["split_hub_valby"];
+            case 10: return settings["split_hub_assistens_kirkegard"];
+            case 11: return settings["split_hub_christiania"];
+            case 12: return settings["split_hub_orstedsparken"];
+            case 13: return settings["split_hub_sydhavnen"];
+            case 14: return settings["split_hub_bella_center"];
+            case 15: return settings["split_hub_vesterbro"];
+            case 16: return settings["split_hub_klovermarken"];
+            case 17: return settings["split_hub_kastrup"];
+            case 18: return settings["split_hub_planetarium"];
+            case 19: return settings["split_hub_tarnby"];
+            case 20: return settings["split_hub_reffen"];
+            case 21: return settings["split_hub_norrebroparken"];
+            case 22: return settings["split_hub_amalienborg"];
+        }
     }
 
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 5) {
-        return settings["split_hub_botanisk_have"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 6) {        
-        return settings["split_hub_kastellet"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 7) {        
-        return settings["split_hub_valby"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 8) {        
-        return settings["split_hub_assistens_kirkegard"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 9) {        
-        return settings["split_hub_christiania"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 10) {        
-        return settings["split_hub_orstedsparken"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 11) {        
-        return settings["split_hub_sydhavnen"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 12) {        
-        return settings["split_hub_bella_center"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 13) {        
-        return settings["split_hub_vesterbro"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 14) {        
-        return settings["split_hub_klovermarken"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 15) {        
-        return settings["split_hub_kastrup"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 16) {        
-        return settings["split_hub_planetarium"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 17) {        
-        return settings["split_hub_tarnby"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 18) {        
-        return settings["split_hub_reffen"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 19) {        
-        return settings["split_hub_norrebroparken"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 20) {        
-        return settings["split_hub_amalienborg"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 22) {        
-        return settings["split_hub_struts"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 23) {        
-        return settings["split_hub_snabel_a"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 24) {        
-        return settings["split_hub_fika"];
-    }
-
-    if(vars.currentScene.Old == 4 && vars.currentScene.Current == 25) {        
-        return settings["split_hub_sar_skrivning"];
+    // Split if loading a level while coming from the Bonus World map
+    if(vars.currentScene.Old == 24){
+        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 22) {        
+        //    return settings["split_hub_struts"];
+        //}
+        //
+        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 23) {        
+        //    return settings["split_hub_snabel_a"];
+        //}
+        //
+        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 24) {        
+        //    return settings["split_hub_fika"];
+        //}
+        //
+        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 25) {        
+        //    return settings["split_hub_sar_skrivning"];
+        //}
     }
 
     return false;
