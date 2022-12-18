@@ -18,8 +18,8 @@ startup {
     settings.Add("splits", true, "Splits");
     settings.CurrentDefaultParent = "splits";
 
-    settings.Add("split_levels", true, "Splits Coming Out Of Levels");
-    settings.CurrentDefaultParent = "split_levels";
+    settings.Add("split_story_levels", true, "Splits Coming Out Of Story Levels");
+    settings.CurrentDefaultParent = "split_story_levels";
 
     settings.Add("split_botanisk_have", true, "Split after Botanisk Have.");
     settings.SetToolTip("split_botanisk_have", "Splits once the hub loads after the level is completed.");
@@ -69,21 +69,85 @@ startup {
     settings.Add("split_amalienborg", false, "Split after Amalienborg.");
     settings.SetToolTip("split_amalienborg", "Splits once the main menu loads after the cutscene is played.");
 
+    settings.CurrentDefaultParent = "splits";
+    settings.Add("split_bonus_levels", true, "Splits Coming Out Of Bonus Levels");
+    settings.CurrentDefaultParent = "split_bonus_levels";
+
     settings.Add("split_struts", true, "Split after Struts.");
-    settings.SetToolTip("split_struts", "Splits once the main menu loads after the level is completed.");
+    settings.SetToolTip("split_struts", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_ekorre", true, "Split after Ekorre.");
+    settings.SetToolTip("split_ekorre", "Splits once the hub loads after the level is completed.");
 
     settings.Add("split_snabel_a", true, "Split after Snabel-A.");
-    settings.SetToolTip("split_snabel_a", "Splits once the main menu loads after the level is completed.");
+    settings.SetToolTip("split_snabel_a", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_fyrkant", true, "Split after Fyrkant.");
+    settings.SetToolTip("split_fyrkant", "Splits once the hub loads after the level is completed.");
 
     settings.Add("split_fika", true, "Split after Fika.");
-    settings.SetToolTip("split_fika", "Splits once the main menu loads after the level is completed.");
+    settings.SetToolTip("split_fika", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_braket", true, "Split after Bråket.");
+    settings.SetToolTip("split_braket", "Splits once the hub loads after the level is completed.");
 
     settings.Add("split_sar_skrivning", true, "Split after Sär Skrivning.");
-    settings.SetToolTip("split_sar_skrivning", "Splits once the main menu loads after the level is completed.");
+    settings.SetToolTip("split_sar_skrivning", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_katten", true, "Split after Katten.");
+    settings.SetToolTip("split_katten", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_fuffens", true, "Split after Fuffens.");
+    settings.SetToolTip("split_fuffens", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_vovven", true, "Split after Vovven.");
+    settings.SetToolTip("split_vovven", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_oatit", true, "Split after Oätit.");
+    settings.SetToolTip("split_oatit", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_namnlos", true, "Split after Namnlös.");
+    settings.SetToolTip("split_namnlos", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_krokodil", true, "Split after Krokodil.");
+    settings.SetToolTip("split_krokodil", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_grotslev", true, "Split after Grötslev.");
+    settings.SetToolTip("split_grotslev", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_sill", true, "Split after Sill.");
+    settings.SetToolTip("split_sill", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_triangel", true, "Split after Triangel.");
+    settings.SetToolTip("split_triangel", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_stolen", true, "Split after Stolen.");
+    settings.SetToolTip("split_stolen", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_pannkakan", true, "Split after Pannkakan.");
+    settings.SetToolTip("split_pannkakan", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_koppen", true, "Split after Koppen.");
+    settings.SetToolTip("split_koppen", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_bullen", true, "Split after Bullen.");
+    settings.SetToolTip("split_bullen", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_ostroken", true, "Split after Ostroken.");
+    settings.SetToolTip("split_ostroken", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_kotten", true, "Split after Kotten.");
+    settings.SetToolTip("split_kotten", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_tack", true, "Split after Tack.");
+    settings.SetToolTip("split_tack", "Splits once the hub loads after the level is completed.");
+
+    settings.Add("split_slutet", false, "Split after Slutet.");
+    settings.SetToolTip("split_slutet", "Splits once the main menu loads after the cutscene is played.");
 
     settings.CurrentDefaultParent = "splits";
-    settings.Add("split_hub", true, "Splits Going Into Levels");
-    settings.CurrentDefaultParent = "split_hub";
+    settings.Add("split_story_hub", true, "Splits Going Into Story Levels");
+    settings.CurrentDefaultParent = "split_story_hub";
 
     settings.Add("split_hub_botanisk_have", false, "Split going into Botanisk Have.");
     settings.SetToolTip("split_hub_botanisk_have", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
@@ -133,17 +197,81 @@ startup {
     settings.Add("split_hub_amalienborg", true, "Split going into Amalienborg.");
     settings.SetToolTip("split_hub_amalienborg", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
+    settings.CurrentDefaultParent = "splits";
+    settings.Add("split_bonus_hub", true, "Splits Going Into Bonus Levels");
+    settings.CurrentDefaultParent = "split_bonus_hub";
+
     settings.Add("split_hub_struts", false, "Split going into Struts.");
-    settings.SetToolTip("split_hub_struts", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+    settings.SetToolTip("split_hub_struts", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_ekorre", false, "Split going into Ekkore.");
+    settings.SetToolTip("split_hub_ekorre", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
     settings.Add("split_hub_snabel_a", false, "Split going into Snabel-A.");
-    settings.SetToolTip("split_hub_snabel_a", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+    settings.SetToolTip("split_hub_snabel_a", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_fyrkant", false, "Split going into Fyrkant.");
+    settings.SetToolTip("split_hub_fyrkant", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
     settings.Add("split_hub_fika", false, "Split going into Fika.");
-    settings.SetToolTip("split_hub_fika", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+    settings.SetToolTip("split_hub_fika", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_braket", false, "Split going into Bråket.");
+    settings.SetToolTip("split_hub_braket", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
     settings.Add("split_hub_sar_skrivning", false, "Split going into Sär Skrivning.");
-    settings.SetToolTip("split_hub_sar_skrivning", "Splits as soon as the level is loaded. Can be used to time main menu menuing separately");
+    settings.SetToolTip("split_hub_sar_skrivning", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_katten", false, "Split going into Katten.");
+    settings.SetToolTip("split_hub_katten", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_fuffens", false, "Split going into Fuffens.");
+    settings.SetToolTip("split_hub_fuffens", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_vovven", false, "Split going into Vovven.");
+    settings.SetToolTip("split_hub_vovven", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_oatit", false, "Split going into Oätit.");
+    settings.SetToolTip("split_hub_oatit", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_namnlos", false, "Split going into Namnlös.");
+    settings.SetToolTip("split_hub_namnlos", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_krokodil", false, "Split going into Krokodil.");
+    settings.SetToolTip("split_hub_krokodil", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_grotslev", false, "Split going into Grötslev.");
+    settings.SetToolTip("split_hub_grotslev", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_sill", false, "Split going into Sill.");
+    settings.SetToolTip("split_hub_sill", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_triangel", false, "Split going into Triangel.");
+    settings.SetToolTip("split_hub_triangel", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_stolen", false, "Split going into Stolen.");
+    settings.SetToolTip("split_hub_stolen", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_pannkakan", false, "Split going into Pannkakan.");
+    settings.SetToolTip("split_hub_pannkakan", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_koppen", false, "Split going into Koppen.");
+    settings.SetToolTip("split_hub_koppen", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_bullen", false, "Split going into Bullen.");
+    settings.SetToolTip("split_hub_bullen", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_ostroken", false, "Split going into Ostroken.");
+    settings.SetToolTip("split_hub_ostroken", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_kotten", false, "Split going into Kotten.");
+    settings.SetToolTip("split_hub_kotten", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_tack", false, "Split going into Tack.");
+    settings.SetToolTip("split_hub_tack", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_slutet", true, "Split going into Slutet.");
+    settings.SetToolTip("split_hub_slutet", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
 
     settings.CurrentDefaultParent = "splits";
@@ -303,14 +431,12 @@ update {
     vars.watchers.UpdateAll(game);
 
     if(vars.currentScene.Old != vars.currentScene.Current) {
-        print(vars.currentScene.Current.ToString());
-
         vars.lastLevel = vars.currentLevel;
-        // Scenes outside of levels
+        // Scenes outside of Story Worlds levels
         if(vars.currentScene.Current <= 6) {
             vars.currentLevel = 0;
         }
-        // Scenes in the bonus world
+        // Scenes in the Bonus World
         else if(vars.currentScene.Current >= 24){
             vars.currentLevel = 17;
         }
@@ -330,7 +456,7 @@ update {
 }
 
 split {
-    // Split if exiting a level and loading the Story World map
+    // Splits if exiting a level and loading the Story World map
     if(vars.currentScene.Current == 6){
         switch((int) vars.currentScene.Old){
             case 7: return vars.CheckTriangles(settings["split_botanisk_have"], settings["split_triangles"]);
@@ -348,29 +474,47 @@ split {
             case 19: return vars.CheckTriangles(settings["split_tarnby"], settings["split_triangles"]);
             case 20: return vars.CheckTriangles(settings["split_reffen"], settings["split_triangles"]);
             case 21: return vars.CheckTriangles(settings["split_norrebroparken"], settings["split_triangles"]);
-            case 22: return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
         }
     }
-    // Split if exiting a level and loading the Bonus World map
+    // Splits if exiting a level and loading the Bonus World map
     if(vars.currentScene.Current == 24){
-        //if(vars.currentScene.Old == 22 && vars.currentScene.Current == 2) {
-        //    return vars.CheckTriangles(settings["split_struts"], settings["split_triangles"]);
-        //}
-        //
-        //if(vars.currentScene.Old == 23 && vars.currentScene.Current == 2) {
-        //    return vars.CheckTriangles(settings["split_snabel_a"], settings["split_triangles"]);
-        //}
-        //
-        //if(vars.currentScene.Old == 24 && vars.currentScene.Current == 2) {
-        //    return vars.CheckTriangles(settings["split_fika"], settings["split_triangles"]);
-        //}
-        //
-        //if(vars.currentScene.Old == 25 && vars.currentScene.Current == 2) {
-        //    return vars.CheckTriangles(settings["split_sar_skrivning"], settings["split_triangles"]);
-        //}
+        switch((int) vars.currentScene.Old){
+            case 25: return vars.CheckTriangles(settings["split_struts"], settings["split_triangles"]);
+            case 26: return vars.CheckTriangles(settings["split_ekorre"], settings["split_triangles"]);
+            case 27: return vars.CheckTriangles(settings["split_snabel_a"], settings["split_triangles"]);
+            case 28: return vars.CheckTriangles(settings["split_fyrkant"], settings["split_triangles"]);
+            case 29: return vars.CheckTriangles(settings["split_fika"], settings["split_triangles"]);
+            case 30: return vars.CheckTriangles(settings["split_braket"], settings["split_triangles"]);
+            case 31: return vars.CheckTriangles(settings["split_sar_skrivning"], settings["split_triangles"]);
+            case 32: return vars.CheckTriangles(settings["split_katten"], settings["split_triangles"]);
+            case 33: return vars.CheckTriangles(settings["split_fuffens"], settings["split_triangles"]);
+            case 34: return vars.CheckTriangles(settings["split_vovven"], settings["split_triangles"]);
+            case 35: return vars.CheckTriangles(settings["split_oatit"], settings["split_triangles"]);
+            case 36: return vars.CheckTriangles(settings["split_namnlos"], settings["split_triangles"]);
+            case 37: return vars.CheckTriangles(settings["split_krokodil"], settings["split_triangles"]);
+            case 38: return vars.CheckTriangles(settings["split_grotslev"], settings["split_triangles"]);
+            case 39: return vars.CheckTriangles(settings["split_sill"], settings["split_triangles"]);
+            case 40: return vars.CheckTriangles(settings["split_triangel"], settings["split_triangles"]);
+            case 41: return vars.CheckTriangles(settings["split_stolen"], settings["split_triangles"]);
+            case 42: return vars.CheckTriangles(settings["split_pannkakan"], settings["split_triangles"]);
+            case 43: return vars.CheckTriangles(settings["split_koppen"], settings["split_triangles"]);
+            case 44: return vars.CheckTriangles(settings["split_bullen"], settings["split_triangles"]);
+            case 45: return vars.CheckTriangles(settings["split_ostroken"], settings["split_triangles"]);
+            case 46: return vars.CheckTriangles(settings["split_kotten"], settings["split_triangles"]);
+            case 47: return vars.CheckTriangles(settings["split_tack"], settings["split_triangles"]);
+        }
+    }
+    // Splits when exiting Amalienborg or Slutet and loading the main menu 
+    if(vars.currentScene.Current == 2){
+        if(vars.currentScene.Old == 22){
+            return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
+        }
+        else if (vars.currentScene.Current == 48){
+            return vars.CheckTriangles(settings["split_slutet"], settings["split_triangles"]);   
+        }
     }
     
-    // Split if loading a level while coming from the Story World map
+    // Splits if loading a level while coming from the Story World map
     if(vars.currentScene.Old == 6){
         switch((int) vars.currentScene.Current){
             case 7: return settings["split_hub_botanisk_have"];
@@ -391,24 +535,34 @@ split {
             case 22: return settings["split_hub_amalienborg"];
         }
     }
-
-    // Split if loading a level while coming from the Bonus World map
+    // Splits if loading a level while coming from the Bonus World map
     if(vars.currentScene.Old == 24){
-        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 22) {        
-        //    return settings["split_hub_struts"];
-        //}
-        //
-        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 23) {        
-        //    return settings["split_hub_snabel_a"];
-        //}
-        //
-        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 24) {        
-        //    return settings["split_hub_fika"];
-        //}
-        //
-        //if(vars.currentScene.Old == 6 && vars.currentScene.Current == 25) {        
-        //    return settings["split_hub_sar_skrivning"];
-        //}
+        switch((int) vars.currentScene.Current){
+            case 25: return settings["split_hub_struts"];
+            case 26: return settings["split_hub_ekorre"];
+            case 27: return settings["split_hub_snabel_a"];
+            case 28: return settings["split_hub_fyrkant"];
+            case 29: return settings["split_hub_fika"];
+            case 30: return settings["split_hub_braket"];
+            case 31: return settings["split_hub_sar_skrivning"];
+            case 32: return settings["split_hub_katten"];
+            case 33: return settings["split_hub_fuffens"];
+            case 34: return settings["split_hub_vovven"];
+            case 35: return settings["split_hub_oatit"];
+            case 36: return settings["split_hub_namnlos"];
+            case 37: return settings["split_hub_krokodil"];
+            case 38: return settings["split_hub_grotslev"];
+            case 39: return settings["split_hub_sill"];
+            case 40: return settings["split_hub_triangel"];
+            case 41: return settings["split_hub_stolen"];
+            case 42: return settings["split_hub_pannkakan"];
+            case 43: return settings["split_hub_koppen"];
+            case 44: return settings["split_hub_bullen"];
+            case 45: return settings["split_hub_ostroken"];
+            case 46: return settings["split_hub_kotten"];
+            case 47: return settings["split_hub_tack"];
+            case 48: return settings["split_hub_slutet"];
+        }
     }
 
     return false;
@@ -421,12 +575,14 @@ isLoading {
 }
 
 start {
+    // Starts timer when loading either the Story or Bonus World from the main menu
     if((vars.currentScene.Old == 2 && vars.currentScene.Current == 6) || (vars.currentScene.Old == 2 && vars.currentScene.Current == 24)) {
         return true;
     }
 
     if(settings["start_il"]) {
-        if((vars.currentScene.Old == 6 && vars.currentScene.Current > 6) || (vars.currentScene.Old == 24 && vars.currentScene.Current >= 24)) {
+        // Starts timer when loading either a Story or Bonus level from their respective maps
+        if((vars.currentScene.Old == 6 && vars.currentScene.Current > 6) || (vars.currentScene.Old == 24 && vars.currentScene.Current > 24)) {
             return true;
         }
     }
