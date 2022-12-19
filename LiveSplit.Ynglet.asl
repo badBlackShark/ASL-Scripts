@@ -506,10 +506,10 @@ split {
     }
     // Splits when exiting Amalienborg or Slutet and loading the main menu 
     if(vars.currentScene.Current == 2){
-        if(vars.currentScene.Old == 22){
+        if(vars.currentScene.Old == 23){
             return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
         }
-        else if (vars.currentScene.Current == 48){
+        else if (vars.currentScene.Old == 48){
             return vars.CheckTriangles(settings["split_slutet"], settings["split_triangles"]);   
         }
     }
