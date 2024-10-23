@@ -146,6 +146,49 @@ startup {
     settings.SetToolTip("split_slutet", "Splits once the main menu loads after the cutscene is played.");
 
     settings.CurrentDefaultParent = "splits";
+    settings.Add("split_special_levels", true, "Splits Coming Out Of Special Levels");
+    settings.CurrentDefaultParent = "split_special_levels";
+
+    settings.Add("split_kamelasa", false, "Split after Kamelåså.");
+    settings.SetToolTip("split_kamelasa", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_dimoplacy", false, "Split after Dimoplacy.");
+    settings.SetToolTip("split_dimoplacy", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_milagro", false, "Split after Milagro.");
+    settings.SetToolTip("split_milagro", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_minne", false, "Split after Minne.");
+    settings.SetToolTip("split_minne", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_bluegie_nights", false, "Split after Bluegie Nights.");
+    settings.SetToolTip("split_bluegie_nights", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_nayas_lair", false, "Split after Naya's Lair.");
+    settings.SetToolTip("split_nayas_lair", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_hel_verdoemenis", false, "Split after Hel & Verdoemenis.");
+    settings.SetToolTip("split_hel_verdoemenis", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_syggelekokle", false, "Split after Syggelekokle.");
+    settings.SetToolTip("split_syggelekokle", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_stikling", false, "Split after Stikling.");
+    settings.SetToolTip("split_stikling", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_franz_jager", false, "Split after Franz Jäger.");
+    settings.SetToolTip("split_franz_jager", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_erjingtino", false, "Split after Erjingtino.");
+    settings.SetToolTip("split_erjingtino", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_sally", false, "Split after Sally.");
+    settings.SetToolTip("split_sally", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.Add("split_fin", false, "Split after Fin.");
+    settings.SetToolTip("split_fin", "Splits once the main menu loads after the cutscene is played.");
+
+    settings.CurrentDefaultParent = "splits";
     settings.Add("split_story_hub", true, "Splits Going Into Story Levels");
     settings.CurrentDefaultParent = "split_story_hub";
 
@@ -272,6 +315,49 @@ startup {
 
     settings.Add("split_hub_slutet", true, "Split going into Slutet.");
     settings.SetToolTip("split_hub_slutet", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.CurrentDefaultParent = "splits";
+    settings.Add("split_special_hub", true, "Splits Going Into Special Levels");
+    settings.CurrentDefaultParent = "split_special_hub";
+
+    settings.Add("split_hub_kamelasa", false, "Split going into Kamelåså.");
+    settings.SetToolTip("split_hub_kamelasa", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_dimoplacy", false, "Split going into Dimoplacy.");
+    settings.SetToolTip("split_hub_dimoplacy", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_milagro", false, "Split going into Milagro.");
+    settings.SetToolTip("split_hub_milagro", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_minne", false, "Split going into Minne.");
+    settings.SetToolTip("split_hub_minne", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_bluegie_nights", false, "Split going into Bluegie Nights.");
+    settings.SetToolTip("split_hub_bluegie_nights", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_nayas_lair", false, "Split going into Naya's Lair.");
+    settings.SetToolTip("split_hub_nayas_lair", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_hel_verdoemenis", false, "Split going into Hel & Verdoemenis.");
+    settings.SetToolTip("split_hub_hel_verdoemenis", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_syggelekokle", false, "Split going into Syggelekokle.");
+    settings.SetToolTip("split_hub_syggelekokle", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_stikling", false, "Split going into Stikling.");
+    settings.SetToolTip("split_hub_stikling", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_franz_jager", false, "Split going into Franz Jäger.");
+    settings.SetToolTip("split_hub_franz_jager", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_erjingtino", false, "Split going into Erjingtino.");
+    settings.SetToolTip("split_hub_erjingtino", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_sally", false, "Split going into Sally.");
+    settings.SetToolTip("split_hub_sally", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+
+    settings.Add("split_hub_fin", false, "Split going into Fin.");
+    settings.SetToolTip("split_hub_fin", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
 
     settings.CurrentDefaultParent = "splits";
@@ -436,7 +522,7 @@ update {
         if(vars.currentScene.Current <= 6) {
             vars.currentLevel = 0;
         }
-        // Scenes in the Bonus World
+        // Scenes in the Bonus and Special World
         else if(vars.currentScene.Current >= 24){
             vars.currentLevel = 17;
         }
@@ -504,13 +590,33 @@ split {
             case 47: return vars.CheckTriangles(settings["split_tack"], settings["split_triangles"]);
         }
     }
-    // Splits when exiting Amalienborg or Slutet and loading the main menu 
+    // Splits if exiting a level and loading the Special World map
+    if(vars.currentScene.Current == 50){
+        switch((int) vars.currentScene.Old){
+            case 51: return vars.CheckTriangles(settings["split_kamelasa"], settings["split_triangles"]);
+            case 52: return vars.CheckTriangles(settings["split_dimoplacy"], settings["split_triangles"]);
+            case 53: return vars.CheckTriangles(settings["split_milagro"], settings["split_triangles"]);
+            case 54: return vars.CheckTriangles(settings["split_minne"], settings["split_triangles"]);
+            case 55: return vars.CheckTriangles(settings["split_bluegie_nights"], settings["split_triangles"]);
+            case 56: return vars.CheckTriangles(settings["split_nayas_lair"], settings["split_triangles"]);
+            case 57: return vars.CheckTriangles(settings["split_hel_verdoemenis"], settings["split_triangles"]);
+            case 58: return vars.CheckTriangles(settings["split_syggelekokle"], settings["split_triangles"]);
+            case 59: return vars.CheckTriangles(settings["split_stikling"], settings["split_triangles"]);
+            case 60: return vars.CheckTriangles(settings["split_franz_jager"], settings["split_triangles"]);
+            case 61: return vars.CheckTriangles(settings["split_erjingtino"], settings["split_triangles"]);
+            case 62: return vars.CheckTriangles(settings["split_sally"], settings["split_triangles"]);
+        }
+    }
+    // Splits when exiting Amalienborg, Slutet or Fin and loading the main menu 
     if(vars.currentScene.Current == 2){
         if(vars.currentScene.Old == 23){
             return vars.CheckTriangles(settings["split_amalienborg"], settings["split_triangles"]);
         }
         else if (vars.currentScene.Old == 48){
             return vars.CheckTriangles(settings["split_slutet"], settings["split_triangles"]);   
+        }
+        else if (vars.currentScene.Old == 63){
+            return vars.CheckTriangles(settings["split_fin"], settings["split_triangles"]);   
         }
     }
     
@@ -562,6 +668,24 @@ split {
             case 46: return settings["split_hub_kotten"];
             case 47: return settings["split_hub_tack"];
             case 48: return settings["split_hub_slutet"];
+        }
+    }
+    // Splits if loading a level while coming from the Special World map
+    if(vars.currentScene.Old == 50){
+        switch((int) vars.currentScene.Current){
+            case 51: return settings["split_hub_kamelasa"];
+            case 52: return settings["split_hub_dimoplacy"];
+            case 53: return settings["split_hub_milagro"];
+            case 54: return settings["split_hub_minne"];
+            case 55: return settings["split_hub_bluegie_nights"];
+            case 56: return settings["split_hub_nayas_lair"];
+            case 57: return settings["split_hub_hel_verdoemenis"];
+            case 58: return settings["split_hub_syggelekokle"];
+            case 59: return settings["split_hub_stikling"];
+            case 60: return settings["split_hub_franz_jager"];
+            case 61: return settings["split_hub_erjingtino"];
+            case 62: return settings["split_hub_sally"];
+            case 63: return settings["split_hub_fin"];
         }
     }
 
