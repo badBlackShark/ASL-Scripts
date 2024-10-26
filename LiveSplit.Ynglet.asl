@@ -615,7 +615,7 @@ split {
         else if (vars.currentScene.Old == 48){
             return vars.CheckTriangles(settings["split_slutet"], settings["split_triangles"]);   
         }
-        else if (vars.currentScene.Old == 63){
+        else if (vars.currentScene.Old == 64){
             return vars.CheckTriangles(settings["split_fin"], settings["split_triangles"]);   
         }
     }
@@ -700,13 +700,13 @@ isLoading {
 
 start {
     // Starts timer when loading either the Story or Bonus World from the main menu
-    if((vars.currentScene.Old == 2 && vars.currentScene.Current == 6) || (vars.currentScene.Old == 2 && vars.currentScene.Current == 24)) {
+    if((vars.currentScene.Old == 2 && vars.currentScene.Current == 6) || (vars.currentScene.Old == 2 && vars.currentScene.Current == 24) || (vars.currentScene.Old == 2 && vars.currentScene.Current == 50)) {
         return true;
     }
 
     if(settings["start_il"]) {
         // Starts timer when loading either a Story or Bonus level from their respective maps
-        if((vars.currentScene.Old == 6 && vars.currentScene.Current > 6) || (vars.currentScene.Old == 24 && vars.currentScene.Current > 24)) {
+        if((vars.currentScene.Old == 6 && vars.currentScene.Current > 6) || (vars.currentScene.Old == 24 && vars.currentScene.Current > 24) || (vars.currentScene.Old == 50 && vars.currentScene.Current > 50)) {
             return true;
         }
     }
