@@ -179,8 +179,8 @@ startup {
     settings.Add("split_franz_jager", false, "Split after Franz Jäger.");
     settings.SetToolTip("split_franz_jager", "Splits once the main menu loads after the cutscene is played.");
 
-    settings.Add("split_erjingtino", false, "Split after Erjingtino.");
-    settings.SetToolTip("split_erjingtino", "Splits once the main menu loads after the cutscene is played.");
+    settings.Add("split_erjingtiao", false, "Split after Erjingtiao.");
+    settings.SetToolTip("split_erjingtiao", "Splits once the main menu loads after the cutscene is played.");
 
     settings.Add("split_sally", false, "Split after Sally.");
     settings.SetToolTip("split_sally", "Splits once the main menu loads after the cutscene is played.");
@@ -350,8 +350,8 @@ startup {
     settings.Add("split_hub_franz_jager", false, "Split going into Franz Jäger.");
     settings.SetToolTip("split_hub_franz_jager", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
-    settings.Add("split_hub_erjingtino", false, "Split going into Erjingtino.");
-    settings.SetToolTip("split_hub_erjingtino", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
+    settings.Add("split_hub_erjingtiao", false, "Split going into Erjingtiao.");
+    settings.SetToolTip("split_hub_erjingtiao", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
 
     settings.Add("split_hub_sally", false, "Split going into Sally.");
     settings.SetToolTip("split_hub_sally", "Splits as soon as the level is loaded. Can be used to time overworld movement separately");
@@ -603,7 +603,7 @@ split {
             case 58: return vars.CheckTriangles(settings["split_syggelekokle"], settings["split_triangles"]);
             case 59: return vars.CheckTriangles(settings["split_stikling"], settings["split_triangles"]);
             case 60: return vars.CheckTriangles(settings["split_franz_jager"], settings["split_triangles"]);
-            case 61: return vars.CheckTriangles(settings["split_erjingtino"], settings["split_triangles"]);
+            case 61: return vars.CheckTriangles(settings["split_erjingtiao"], settings["split_triangles"]);
             case 62: return vars.CheckTriangles(settings["split_sally"], settings["split_triangles"]);
         }
     }
@@ -683,7 +683,7 @@ split {
             case 58: return settings["split_hub_syggelekokle"];
             case 59: return settings["split_hub_stikling"];
             case 60: return settings["split_hub_franz_jager"];
-            case 61: return settings["split_hub_erjingtino"];
+            case 61: return settings["split_hub_erjingtiao"];
             case 62: return settings["split_hub_sally"];
             case 63: return settings["split_hub_fin"];
         }
