@@ -1,3 +1,5 @@
+// Crafted with the loving help of https://github.com/just-ero
+
 state("MusketeerGame-Win64-Shipping") {
 }
 
@@ -35,7 +37,6 @@ startup {
     }
 }
 
-// Crafted with the loving help of https://github.com/just-ero
 init {
     if (settings["deaths_per_run"]) {
         vars.Helper.Texts["deaths_per_run"] = vars.Helper.Texts.Find("Deaths this Run:");
