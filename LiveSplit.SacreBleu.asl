@@ -4,11 +4,6 @@ state("MusketeerGame-Win64-Shipping") {
 startup {
     Assembly.Load(File.ReadAllBytes("Components/asl-help")).CreateInstance("Basic");
 
-    vars.scanTarget = new SigScanTarget(0,
-        "C7 4C 95 0C 00 00 00 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00",
-        "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00"
-    );
-
     settings.Add("tutorial_split", true, "Split tutorial separately");
     settings.SetToolTip("tutorial_split", "Split the timer when entering the first level after the tutorial. \n" +
                         "If not selected, the timer will continue to run until the first real level is completed.");
