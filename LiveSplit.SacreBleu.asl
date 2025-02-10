@@ -83,6 +83,10 @@ update {
     vars.Helper.Update();
     vars.Helper.MapPointers();
 
+    if(vars.Helper["levelFinishedLoading"].Old == 0 && vars.Helper["levelFinishedLoading"].Current == 1) {
+        vars.combinedGameTime += vars.Helper["gameTime"].Old;
+    }
+
     if(settings["deaths_per_run"]) {
         if(vars.Helper["deathsThisRun"].Old != vars.Helper["deathsThisRun"].Current) {
             vars.Helper.Texts["deaths_per_run"].Right = vars.Helper["deathsThisRun"].Current;
@@ -115,19 +119,14 @@ split {
     }
 }
 
-isLoading {
+isLoading {88
     if(settings["load_removal"]){
         return vars.Helper["gameTime"].Old == vars.Helper["gameTime"].Current;//--*-+
     }
 }
 
 gameTime {
-    print(vars.combinedGameTime.ToString());
-    if(settings["combat_deductions"]){
-        if(vars.Helper["levelFinishedLoading"].Old == 0 && vars.Helper["levelFinishedLoading"].Current == 1) {
-            vars.combinedGameTime += vars.Helper["gameTime"].Old;
-        }
-
+    if(settings["combat_deductions"]) {
         return (TimeSpan.FromMilliseconds(vars.combinedGameTime + vars.Helper["gameTime"].Current));
     }
 }
