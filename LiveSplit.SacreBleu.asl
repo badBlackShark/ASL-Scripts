@@ -1,5 +1,3 @@
-// Crafted with the loving help of https://github.com/just-ero
-
 state("MusketeerGame-Win64-Shipping") {
 }
 
@@ -10,6 +8,10 @@ startup {
         "C7 4C 95 0C 00 00 00 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00",
         "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00"
     );
+
+    settings.Add("tutorial_split", true, "Split tutorial separately");
+    settings.SetToolTip("tutorial_split", "Split the timer when entering the first level after the tutorial. \n" +
+                        "If not selected, the timer will continue to run until the first real level is completed.");
 
     settings.Add("load_removal", true, "Load Removal");
     settings.SetToolTip("load_removal", "Stop the timer when the game is paused or loading");
@@ -38,6 +40,7 @@ startup {
     }
 }
 
+// Crafted with the loving help of https://github.com/just-ero
 init {
     if (settings["deaths_per_run"]) {
         vars.Helper.Texts["deaths_per_run"] = vars.Helper.Texts.Find("Deaths this Run:");
@@ -104,6 +107,13 @@ start {
 }
 
 split {
+    if(settings["tutorial_split"] &&
+       vars.Helper["levelsCompletedOnCurrentSave"].Current == 0 &&
+       vars.Helper["levelId"].Old == 21 &&
+       vars.Helper["levelId"].Current == 0) {
+        return true;
+      }
+
     if(vars.Helper["levelsCompletedOnCurrentSave"].Current > vars.Helper["levelsCompletedOnCurrentSave"].Old) {
         return true;
     }
@@ -111,11 +121,12 @@ split {
 
 isLoading {
     if(settings["load_removal"]){
-        return vars.Helper["gameTime"].Old == vars.Helper["gameTime"].Current;
+        return vars.Helper["gameTime"].Old == vars.Helper["gameTime"].Current;//--*-+
     }
 }
 
 gameTime {
+    print(vars.combinedGameTime.ToString());
     if(settings["combat_deductions"]){
         if(vars.Helper["levelFinishedLoading"].Old == 0 && vars.Helper["levelFinishedLoading"].Current == 1) {
             vars.combinedGameTime += vars.Helper["gameTime"].Old;
@@ -126,5 +137,9 @@ gameTime {
 }
 
 onStart {
+    vars.combinedGameTime = 0;
+}
+
+onReset {
     vars.combinedGameTime = 0;
 }
