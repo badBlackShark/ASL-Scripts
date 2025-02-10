@@ -119,7 +119,7 @@ split {
     }
 }
 
-isLoading {88
+isLoading {
     if(settings["load_removal"]){
         return vars.Helper["gameTime"].Old == vars.Helper["gameTime"].Current;//--*-+
     }
